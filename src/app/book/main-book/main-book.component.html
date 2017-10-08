@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 class="titlePosition">Books</h2>
+  <div>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of books">
+        <td><img src="{{book.image}}" width="150" height="225"></td>
+        <td>{{book.name}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.price}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
