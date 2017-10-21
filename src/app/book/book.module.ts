@@ -1,18 +1,22 @@
 import {NgModule} from '@angular/core';
 import {MainBookComponent} from './main-book/main-book.component';
 import {RouterModule} from '@angular/router';
-import {routes} from './book.route';
+import {bookRoutes} from './book.route';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {InfoBookComponent} from './info-book/info-book.component';
 
 @NgModule({
   declarations: [
-    MainBookComponent
+    MainBookComponent,
+    InfoBookComponent
   ],
   imports: [
-    RouterModule.forChild(routes),
+    RouterModule.forChild(bookRoutes),
     FormsModule,
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [],
 })

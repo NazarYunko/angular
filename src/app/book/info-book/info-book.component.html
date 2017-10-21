@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="container-fluid">
+  <div class="container-fluid">
+    <div class="col-md-3 col-lg-3">
+      <img class="img-rounded" src="{{book.image}}" width="250" height="325">
+    </div>
+    <div class="col-md-6 col-lg-6" style="margin-top: -2%">
+      <h2 style="color: #444444; text-align: left;">{{book.name}}</h2>
+      <div class="text-size">Author: {{book.author}}</div>
+      <div class="text-size">Price: {{book.price}}</div>
+    </div>
+
+    <div class="col-md-3 col-lg-3">
+      <div class="container-fluid">
+        <div class="col-md-6 col-lg-6">
+          <form action="/updatebook/${book.id}" method="get">
+            <button class="btn btn-success btn-md">UPDATE</button>
+          </form>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <form action="/deletebook/${book.id}?${_csrf.parameterName}=${_csrf.token}"
+                method="post">
+            <button class="btn btn-danger btn-md">DELETE</button>
+          </form>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
